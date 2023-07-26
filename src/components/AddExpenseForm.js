@@ -3,7 +3,7 @@ import { AppContext } from "../context/AppContext";
 import { v4 as uuidv4 } from 'uuid';
 
 const AddExpenseForm = () => {
-  const {dispatch} = useContext(AppContext);
+  const { dispatch } = useContext(AppContext);
 
    const [name, setName] = useState('');
    const [cost, setCost] = useState('');
@@ -32,7 +32,7 @@ const AddExpenseForm = () => {
         </div>
         <div className="col-sm">
           <label for="name">Cost</label>
-          <input type='text' required='required' className='formControl' id='cost' value={cost} onChange={(event) => setCost(event.target.value)}  />
+          <input type='number' required='required' className='formControl' id='cost' value={cost} onChange={(event) => setCost(event.target.value)}  />
         </div>
       </div>
       <div className="row">
